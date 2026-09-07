@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find Us — Ek Aur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="index.html" class="logo"><span class="dot"></span>ek aur</a>
+    <div class="nav-links">
+      <a href="index.html#flavors">Flavors</a>
+      <a href="index.html#story">Our story</a>
+      <a href="ingredients.html">Ingredients</a>
+      <a href="find-us.html" class="active">Find us</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <a href="find-us.html" class="btn">Find a store</a>
+  </nav>
+</header>
+
+<section class="page-header">
+  <div class="blob" style="width:260px; height:260px; bottom:-120px; left:-60px;"></div>
+  <div class="wrap">
+    <div class="eyebrow">Store locator</div>
+    <h1>Find Ek Aur near you.</h1>
+    <p>We're growing city by city. Search your area below, or tell us where to go next.</p>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="wrap">
+    <div class="locator-panel">
+      <div class="locator-search">
+        <h3>Search by city or pin code</h3>
+        <form class="search-row" onsubmit="event.preventDefault();">
+          <input type="text" placeholder="e.g. Delhi, 110001" aria-label="City or pin code">
+          <button class="btn" type="submit">Search</button>
+        </form>
+        <div class="request-note">
+          <strong style="display:block; color:var(--ink); margin-bottom:8px;">Don't see your city?</strong>
+          Tell us where you'd like to find Ek Aur and we'll let you know the moment we land there.
+          <form style="margin-top:14px; display:flex; gap:8px;" onsubmit="event.preventDefault(); this.querySelector('input').value=''; document.getElementById('req-thanks').style.display='block';">
+            <input type="text" required placeholder="Your city" aria-label="Requested city" style="flex:1; padding:11px 14px; border-radius:100px; border:2px solid var(--ink); font-family:inherit; font-size:13.5px; background:#fff;">
+            <button class="btn ghost" type="submit" style="padding:10px 18px; font-size:13.5px;">Request</button>
+          </form>
+          <p id="req-thanks" style="display:none; margin-top:10px; font-weight:700; color:var(--teal-dark);">Thanks — we've logged your city.</p>
+        </div>
+      </div>
+      <div class="locator-map" role="img" aria-label="Stylized map showing Ek Aur retailer locations across major cities">
+        <div class="map-pin" style="top:38%; left:32%;"></div>
+        <div class="map-pin" style="top:58%; left:52%;"></div>
+        <div class="map-pin" style="top:28%; left:64%;"></div>
+        <div class="map-pin" style="top:70%; left:24%;"></div>
+        <div class="map-pin" style="top:46%; left:76%;"></div>
+      </div>
+    </div>
+
+    <div class="city-list">
+      <div class="city-row">
+        <div><div class="city">Delhi NCR</div><div class="stores">Whole Foods Market, Fresh &amp; Local, 24 independent stores</div></div>
+        <div class="count">26 stores</div>
+      </div>
+      <div class="city-row">
+        <div><div class="city">Mumbai</div><div class="stores">Nature's Basket, City Grocer, 18 independent stores</div></div>
+        <div class="count">21 stores</div>
+      </div>
+      <div class="city-row">
+        <div><div class="city">Bengaluru</div><div class="stores">Green Cart, Third Wave Coffee (select outlets)</div></div>
+        <div class="count">14 stores</div>
+      </div>
+      <div class="city-row">
+        <div><div class="city">Pune</div><div class="stores">Fresh &amp; Local, 6 independent stores</div></div>
+        <div class="count">9 stores</div>
+      </div>
+      <div class="city-row">
+        <div><div class="city">Hyderabad</div><div class="stores">Coming soon — join the waitlist above</div></div>
+        <div class="count">Launching soon</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" id="cta">
+  <div class="wrap">
+    <div>
+      <h2>Would rather have it shipped?</h2>
+      <p style="margin-top:14px; font-size:16px;">Online ordering is on the way. Join the list and we'll email you the moment it opens.</p>
+      <form class="cta-form" onsubmit="event.preventDefault(); this.querySelector('input').value=''; document.getElementById('cta-thanks').style.display='block';">
+        <input type="email" required placeholder="you@example.com" aria-label="Email address">
+        <button class="btn" type="submit">Notify me</button>
+      </form>
+      <p class="cta-note" id="cta-thanks" style="display:none;">You're on the list — first can's on us at launch.</p>
+      <p class="cta-note" id="cta-static">No spam. Unsubscribe whenever.</p>
+    </div>
+    <svg viewBox="0 0 300 300" style="justify-self:center;">
+      <rect x="100" y="30" width="100" height="240" rx="26" fill="#FF6B4A"/>
+      <rect x="100" y="30" width="100" height="38" rx="26" fill="#1B1206"/>
+      <circle cx="150" cy="150" r="36" fill="#FFF6E9"/>
+      <text x="150" y="145" text-anchor="middle" fill="#1B1206" font-family="Unbounded, sans-serif" font-weight="900" font-size="15">EK AUR</text>
+      <text x="150" y="162" text-anchor="middle" fill="#1B1206" font-family="Unbounded, sans-serif" font-weight="700" font-size="11">MANGO CHILI</text>
+    </svg>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="logo"><span class="dot"></span>ek aur</a>
+        <p style="max-width:260px; margin-top:14px; font-size:14.5px; color:#4a3d2e;">Prebiotic soda made for the moment you reach for another one.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <a href="index.html#flavors">All flavors</a>
+          <a href="find-us.html">Find in stores</a>
+        </div>
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <a href="index.html#story">Our story</a>
+          <a href="ingredients.html">Ingredients</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <a href="#">Instagram</a>
+          <a href="#">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Ek Aur Beverage Co. All rights reserved.</span>
+      <span>Made with real fruit, not real subtlety.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
