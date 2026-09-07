@@ -62,10 +62,15 @@
     </div>
     <div class="flavor-grid">
       <div class="flavor-card f1">
-        <picture>
-          <source srcset="can-mango-chili.webp" type="image/webp">
-          <img class="flavor-photo" src="can-mango-chili.jpg" alt="Ek Aur Mango Chili can with fresh mango and red chilies" loading="lazy">
-        </picture>
+        <div class="flavor-media">
+          <picture>
+            <source srcset="can-mango-chili.webp" type="image/webp">
+            <img class="flavor-photo" src="can-mango-chili.jpg" alt="Ek Aur Mango Chili can with fresh mango and red chilies" loading="lazy">
+          </picture>
+          <video class="flavor-video" muted loop playsinline preload="none" poster="can-mango-chili.jpg">
+            <source src="video-mango-chili.mp4" type="video/mp4">
+          </video>
+        </div>
         <div class="flavor-card-body">
           <span class="flavor-tag">Best seller</span>
           <div>
@@ -75,10 +80,15 @@
         </div>
       </div>
       <div class="flavor-card f2">
-        <picture>
-          <source srcset="can-rose-cardamom.webp" type="image/webp">
-          <img class="flavor-photo" src="can-rose-cardamom.jpg" alt="Ek Aur Rose Cardamom can with rose petals and cardamom pods" loading="lazy">
-        </picture>
+        <div class="flavor-media">
+          <picture>
+            <source srcset="can-rose-cardamom.webp" type="image/webp">
+            <img class="flavor-photo" src="can-rose-cardamom.jpg" alt="Ek Aur Rose Cardamom can with rose petals and cardamom pods" loading="lazy">
+          </picture>
+          <video class="flavor-video" muted loop playsinline preload="none" poster="can-rose-cardamom.jpg">
+            <source src="video-rose-cardamom.mp4" type="video/mp4">
+          </video>
+        </div>
         <div class="flavor-card-body">
           <span class="flavor-tag">New</span>
           <div>
@@ -88,10 +98,15 @@
         </div>
       </div>
       <div class="flavor-card f3">
-        <picture>
-          <source srcset="can-jamun-fizz.webp" type="image/webp">
-          <img class="flavor-photo" src="can-jamun-fizz.jpg" alt="Ek Aur Jamun Fizz can with fresh jamun berries" loading="lazy">
-        </picture>
+        <div class="flavor-media">
+          <picture>
+            <source srcset="can-jamun-fizz.webp" type="image/webp">
+            <img class="flavor-photo" src="can-jamun-fizz.jpg" alt="Ek Aur Jamun Fizz can with fresh jamun berries" loading="lazy">
+          </picture>
+          <video class="flavor-video" muted loop playsinline preload="none" poster="can-jamun-fizz.jpg">
+            <source src="video-jamun-fizz.mp4" type="video/mp4">
+          </video>
+        </div>
         <div class="flavor-card-body">
           <span class="flavor-tag">Fan favorite</span>
           <div>
@@ -101,10 +116,15 @@
         </div>
       </div>
       <div class="flavor-card f4">
-        <picture>
-          <source srcset="can-guava-lime.webp" type="image/webp">
-          <img class="flavor-photo" src="can-guava-lime.jpg" alt="Ek Aur Guava Lime can with guava halves and lime wedges" loading="lazy">
-        </picture>
+        <div class="flavor-media">
+          <picture>
+            <source srcset="can-guava-lime.webp" type="image/webp">
+            <img class="flavor-photo" src="can-guava-lime.jpg" alt="Ek Aur Guava Lime can with guava halves and lime wedges" loading="lazy">
+          </picture>
+          <video class="flavor-video" muted loop playsinline preload="none" poster="can-guava-lime.jpg">
+            <source src="video-hero-group.mp4" type="video/mp4">
+          </video>
+        </div>
         <div class="flavor-card-body">
           <span class="flavor-tag">Everyday</span>
           <div>
@@ -146,31 +166,6 @@
           <div style="opacity:.8; font-size:14.5px; margin-top:4px;">Prebiotic fiber and low sugar, so "one more" doesn't come with a catch.</div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="section tight video-showcase">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>See it in motion</h2>
-      <p>The cans, the fruit, the fizz — watch before you shop.</p>
-    </div>
-    <div class="video-main">
-      <video controls preload="metadata" poster="video-rose-commercial-poster.jpg" playsinline>
-        <source src="video-rose-commercial.mp4" type="video/mp4">
-      </video>
-    </div>
-    <div class="video-grid">
-      <video class="video-tile" autoplay muted loop playsinline poster="video-mango-chili-poster.jpg">
-        <source src="video-mango-chili.mp4" type="video/mp4">
-      </video>
-      <video class="video-tile" autoplay muted loop playsinline poster="video-jamun-fizz-poster.jpg">
-        <source src="video-jamun-fizz.mp4" type="video/mp4">
-      </video>
-      <video class="video-tile" autoplay muted loop playsinline poster="video-hero-group-poster.jpg">
-        <source src="video-hero-group.mp4" type="video/mp4">
-      </video>
     </div>
   </div>
 </section>
@@ -312,6 +307,20 @@
     </div>
   </div>
 </footer>
+
+<script>
+  document.querySelectorAll('.flavor-card').forEach(function(card){
+    var video = card.querySelector('.flavor-video');
+    if (!video) return;
+    card.addEventListener('mouseenter', function(){
+      video.currentTime = 0;
+      video.play().catch(function(){});
+    });
+    card.addEventListener('mouseleave', function(){
+      video.pause();
+    });
+  });
+</script>
 
 </body>
 </html>

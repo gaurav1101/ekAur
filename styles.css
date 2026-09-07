@@ -120,7 +120,11 @@ nav.wrap{ display:flex; align-items:center; justify-content:space-between; heigh
 .flavor-card:nth-child(2):hover{ transform:translateY(-8px) rotate(1.4deg) scale(1.01); }
 .flavor-card:nth-child(4){ transform:rotate(-1.8deg); }
 .flavor-card:nth-child(4):hover{ transform:translateY(-8px) rotate(-1.8deg) scale(1.01); }
-.flavor-photo{width:100%; aspect-ratio:4/3; object-fit:cover; display:block;}
+.flavor-media{position:relative; width:100%; aspect-ratio:4/3; overflow:hidden;}
+.flavor-photo{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:opacity .25s ease;}
+.flavor-video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; opacity:0; transition:opacity .25s ease; pointer-events:none;}
+.flavor-card:hover .flavor-photo{opacity:0;}
+.flavor-card:hover .flavor-video{opacity:1;}
 .flavor-card-body{padding:20px 22px 24px; display:flex; flex-direction:column; flex:1; justify-content:space-between;}
 .flavor-card h3{font-size:23px; font-weight:700; margin-top:16px;}
 .flavor-card p{font-size:14.5px; margin-top:8px; opacity:0.85;}
@@ -129,14 +133,6 @@ nav.wrap{ display:flex; align-items:center; justify-content:space-between; heigh
 .f2{background:#FFE3B0; color:#7A4A00;}
 .f3{background:#CDEFE6; color:#0A423D;}
 .f4{background:#FFD3C2; color:#7A2A0E;}
-
-/* ---------- VIDEO SHOWCASE ---------- */
-.video-main{ border-radius:var(--radius-lg); overflow:hidden; box-shadow:0 24px 50px rgba(27,18,6,0.16); }
-.video-main video{ width:100%; display:block; background:var(--ink); aspect-ratio:16/9; object-fit:cover;}
-.video-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:22px; }
-.video-tile{ width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:var(--radius-sm); display:block; }
-.video-tile:nth-child(2){ margin-top:16px; }
-.video-tile:nth-child(3){ margin-top:-16px; }
 
 /* ---------- STORY ---------- */
 .story{ background:var(--teal); color:var(--cream); position:relative; }
@@ -274,7 +270,4 @@ footer{background:var(--cream); padding:60px 0 34px;}
   .locator-panel{grid-template-columns:1fr;}
   .city-row{padding:18px 24px;}
   .hero-photo-frame{width:320px;}
-  .video-grid{grid-template-columns:repeat(3,1fr); gap:10px;}
-  .video-tile:nth-child(2){margin-top:0;}
-  .video-tile:nth-child(3){margin-top:0;}
 }
