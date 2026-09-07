@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reserve the Founding Batch — Ek Aur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="index.html" class="logo"><span class="dot"></span>ek aur</a>
+    <div class="nav-links">
+      <a href="index.html#flavors">Flavors</a>
+      <a href="index.html#story">Our story</a>
+      <a href="ingredients.html">Ingredients</a>
+      <a href="reserve.html" class="active">Reserve now</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <a href="reserve.html" class="btn">Reserve now</a>
+  </nav>
+</header>
+
+<section class="page-header reserve-header">
+  <div class="blob" style="width:260px; height:260px; top:-100px; right:-60px;"></div>
+  <div class="wrap">
+    <div class="eyebrow">Founding batch &middot; limited to 500 reservations</div>
+    <h1>Be one of the first 500 to reserve Ek Aur.</h1>
+    <p>We haven't gone into production yet — this is the moment that decides if we do. Reserve now, and if we hit our number, your batch ships. If we don't, you're refunded in full.</p>
+  </div>
+</section>
+
+<section class="section tight">
+  <div class="wrap">
+
+    <div class="reserve-progress">
+      <div class="reserve-progress-top">
+        <span class="reserve-count"><strong id="reserved-count">0</strong> / 500 reserved</span>
+        <span class="reserve-deadline">Batch closes in <strong id="countdown">30d 00h 00m</strong></span>
+      </div>
+      <div class="reserve-bar"><div class="reserve-bar-fill" id="reserve-bar-fill" style="width:0%;"></div></div>
+    </div>
+
+    <div class="reserve-panel">
+      <div class="reserve-offer">
+        <span class="flavor-tag" style="background:rgba(230,62,122,0.12); color:var(--magenta-dark);">Founding Reserve</span>
+        <h2 style="font-size:32px; font-weight:800; margin-top:14px;">Ek Aur — 12-Pack, Mixed Flavors</h2>
+        <p style="margin-top:10px; color:#4a3d2e; font-size:15.5px; max-width:440px;">One case of 12 cans across all four flavors — Mango Chili, Rose Cardamom, Jamun Fizz, Guava Lime. Founding-batch pricing, only available during this reservation window.</p>
+        <div class="reserve-price">
+          <span class="price-now">₹1,199</span>
+          <span class="price-note">≈ ₹100/can &middot; regular launch price will be ₹1,799</span>
+        </div>
+        <ul class="reserve-perks">
+          <li>Your name on our public Founders page</li>
+          <li>First access to every new flavor we release</li>
+          <li>Full refund within 14 days if we don't hit 500 reservations</li>
+        </ul>
+      </div>
+
+      <div class="reserve-pay">
+        <div class="reserve-step">
+          <span class="step-num">1</span>
+          <div>
+            <h3>Pay ₹1,199 via UPI</h3>
+            <p>Scan the code, or pay directly to the UPI ID below. Use any UPI app — Google Pay, PhonePe, Paytm, or your bank's app.</p>
+          </div>
+        </div>
+        <div class="qr-card">
+          <picture>
+            <source srcset="upi-qr.webp" type="image/webp">
+            <img src="upi-qr.jpg" alt="UPI QR code to pay ₹1,199 to gaurav.kaushik1101@okicici for the Ek Aur founding reserve">
+          </picture>
+          <div class="upi-id-row">
+            <span id="upi-id-text">gaurav.kaushik1101@okicici</span>
+            <button type="button" class="copy-btn" id="copy-upi-btn">Copy</button>
+          </div>
+        </div>
+
+        <div class="reserve-step">
+          <span class="step-num">2</span>
+          <div>
+            <h3>Confirm your order</h3>
+            <p>After paying, fill in your details and the UPI reference number shown in your payment app — this is how we log and confirm your reservation.</p>
+          </div>
+        </div>
+        <a href="https://forms.gle/FbpKLu3tuLcGC3Wn7" target="_blank" rel="noopener" class="btn reserve-confirm-btn">I've paid — confirm my order</a>
+      </div>
+    </div>
+
+    <div class="reserve-terms">
+      <h3>How this works</h3>
+      <div class="story-meaning-row" style="border-bottom:1px solid var(--line);">
+        <div class="num" style="color:var(--magenta-dark);">01</div>
+        <div>
+          <strong>This is a conditional pre-order.</strong>
+          <div style="opacity:.75; font-size:14.5px; margin-top:4px; color:#4a3d2e;">We go into production only if we reach 500 reservations before the deadline above. Your payment is collected now, but nothing ships until that number is hit.</div>
+        </div>
+      </div>
+      <div class="story-meaning-row" style="border-bottom:1px solid var(--line);">
+        <div class="num" style="color:var(--magenta-dark);">02</div>
+        <div>
+          <strong>If we hit 500, you're in.</strong>
+          <div style="opacity:.75; font-size:14.5px; margin-top:4px; color:#4a3d2e;">We'll email every reserver with the production timeline and expected delivery window.</div>
+        </div>
+      </div>
+      <div class="story-meaning-row">
+        <div class="num" style="color:var(--magenta-dark);">03</div>
+        <div>
+          <strong>If we don't, you're refunded — fully, within 14 days.</strong>
+          <div style="opacity:.75; font-size:14.5px; margin-top:4px; color:#4a3d2e;">No questions asked, no partial refunds. If production doesn't happen, this doesn't cost you anything.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="logo"><span class="dot"></span>ek aur</a>
+        <p style="max-width:260px; margin-top:14px; font-size:14.5px; color:#4a3d2e;">Prebiotic soda made for the moment you reach for another one.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <a href="index.html#flavors">All flavors</a>
+          <a href="reserve.html">Reserve now</a>
+        </div>
+        <div class="footer-col">
+          <h4>Learn</h4>
+          <a href="index.html#story">Our story</a>
+          <a href="ingredients.html">Ingredients</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <a href="#">Instagram</a>
+          <a href="#">TikTok</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Ek Aur Beverage Co. All rights reserved.</span>
+      <span>Made with real fruit, not real subtlety.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ── EDIT THIS to update the live reservation counter ──
+  // Update this number by hand whenever you check your payment/Sheet records.
+  var RESERVED_SO_FAR = 0;
+  var BATCH_TARGET = 500;
+
+  // ── EDIT THIS to change the reservation deadline ──
+  // Format: 'YYYY-MM-DDTHH:MM:SS'
+  var DEADLINE = new Date('2026-10-07T23:59:59');
+
+  document.getElementById('reserved-count').textContent = RESERVED_SO_FAR;
+  document.getElementById('reserve-bar-fill').style.width = Math.min(100, (RESERVED_SO_FAR / BATCH_TARGET) * 100) + '%';
+
+  function updateCountdown(){
+    var now = new Date();
+    var diff = DEADLINE - now;
+    var el = document.getElementById('countdown');
+    if (diff <= 0){ el.textContent = 'Closed'; return; }
+    var d = Math.floor(diff / (1000*60*60*24));
+    var h = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+    var m = Math.floor((diff % (1000*60*60)) / (1000*60));
+    el.textContent = d + 'd ' + String(h).padStart(2,'0') + 'h ' + String(m).padStart(2,'0') + 'm';
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 60000);
+
+  document.getElementById('copy-upi-btn').addEventListener('click', function(){
+    var text = document.getElementById('upi-id-text').textContent;
+    navigator.clipboard.writeText(text).then(function(){
+      var btn = document.getElementById('copy-upi-btn');
+      var original = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(function(){ btn.textContent = original; }, 1800);
+    });
+  });
+</script>
+
+</body>
+</html>

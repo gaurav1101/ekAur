@@ -192,6 +192,65 @@ nav.wrap{ display:flex; align-items:center; justify-content:space-between; heigh
 .t-who .name{font-weight:700; font-size:14px;}
 .t-who .meta{font-size:12.5px; opacity:0.6;}
 
+/* ---------- RESERVE / PRE-ORDER ---------- */
+.reserve-progress{ margin-bottom:48px; }
+.reserve-progress-top{ display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:10px; font-size:15px; font-weight:600; margin-bottom:12px; }
+.reserve-count strong, .reserve-deadline strong{ font-family:'Unbounded'; font-weight:700; color:var(--magenta-dark); }
+.reserve-bar{ height:14px; border-radius:100px; background:var(--line); overflow:hidden; }
+.reserve-bar-fill{ height:100%; background:linear-gradient(90deg, var(--magenta), var(--coral)); border-radius:100px; transition:width .4s ease; }
+
+.reserve-panel{
+  display:grid; grid-template-columns:1fr 1fr; gap:0;
+  border:1px solid var(--line); border-radius:var(--radius-lg); overflow:hidden;
+  margin-bottom:56px;
+}
+.reserve-offer{ background:var(--cream); padding:44px; }
+.reserve-price{ margin-top:22px; display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; }
+.price-now{ font-family:'Unbounded'; font-weight:800; font-size:40px; color:var(--ink); }
+.price-note{ font-size:13px; color:#7a6a56; max-width:220px; }
+.reserve-perks{ margin-top:24px; list-style:none; display:flex; flex-direction:column; gap:10px; }
+.reserve-perks li{ font-size:14.5px; padding-left:26px; position:relative; color:#4a3d2e; }
+.reserve-perks li::before{ content:"✓"; position:absolute; left:0; color:var(--teal); font-weight:700; }
+
+.reserve-pay{ background:#FFF0DC; padding:44px; }
+.reserve-step{ display:flex; gap:14px; margin-bottom:16px; }
+.step-num{
+  width:30px; height:30px; border-radius:50%; background:var(--ink); color:var(--cream);
+  display:flex; align-items:center; justify-content:center; font-family:'Unbounded'; font-weight:700; font-size:13px;
+  flex-shrink:0;
+}
+.reserve-step h3{ font-size:17px; font-weight:700; }
+.reserve-step p{ font-size:13.5px; color:#4a3d2e; margin-top:4px; }
+.qr-card{
+  background:#fff; border-radius:var(--radius-sm); padding:20px; margin:0 0 28px 44px;
+  border:1px solid var(--line); max-width:280px;
+}
+.qr-card img{ width:100%; border-radius:8px; }
+.upi-id-row{
+  display:flex; align-items:center; justify-content:space-between; gap:10px;
+  margin-top:14px; font-size:12.5px; font-weight:600; word-break:break-all;
+}
+.copy-btn{
+  background:var(--ink); color:var(--cream); font-size:11.5px; font-weight:700;
+  padding:7px 14px; border-radius:100px; white-space:nowrap; flex-shrink:0;
+}
+.copy-btn:hover{ background:var(--magenta-dark); }
+.reserve-confirm-btn{
+  display:block; text-align:center; margin-left:44px; background:var(--teal); color:var(--cream);
+  padding:16px 20px; font-size:15.5px;
+}
+.reserve-confirm-btn:hover{ background:var(--teal-dark); }
+
+.reserve-terms{ background:var(--teal); color:var(--cream); border-radius:var(--radius-lg); padding:40px 44px; }
+.reserve-terms h3{ font-size:20px; font-weight:700; margin-bottom:10px; color:var(--marigold); }
+.reserve-terms .story-meaning-row{ border-color:rgba(255,246,233,0.16) !important; }
+
+@media (max-width:920px){
+  .reserve-panel{grid-template-columns:1fr;}
+  .qr-card, .reserve-confirm-btn{ margin-left:0; }
+  .reserve-offer, .reserve-pay{ padding:30px 24px; }
+}
+
 /* ---------- STORE LOCATOR ---------- */
 .locator-panel{
   display:grid; grid-template-columns:1fr 1.3fr; gap:0;
