@@ -127,11 +127,18 @@ nav.wrap{ display:flex; align-items:center; justify-content:space-between; heigh
 .flavor-card:nth-child(4){ transform:rotate(-1.8deg); }
 .flavor-card:nth-child(4):hover{ transform:translateY(-8px) rotate(-1.8deg) scale(1.01); }
 .flavor-media{position:relative; width:100%; aspect-ratio:4/3; overflow:hidden;}
+.flavor-media svg{position:absolute; inset:0; width:100%; height:100%; display:block;}
 .flavor-photo{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; transition:opacity .25s ease;}
 .flavor-video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; opacity:0; transition:opacity .25s ease; pointer-events:none;}
 .flavor-card:hover .flavor-photo{opacity:0;}
 .flavor-card:hover .flavor-video{opacity:1;}
 .flavor-card-body{padding:20px 22px 24px; display:flex; flex-direction:column; flex:1; justify-content:space-between;}
+.flavor-card.locked .flavor-media{opacity:0.55; filter:grayscale(0.3);}
+.lock-overlay{
+  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+  color:var(--cream); background:rgba(36,26,18,0.28);
+}
+.flavor-card.locked .flavor-tag{background:rgba(36,26,18,0.14); color:var(--ink);}
 .flavor-card h3{font-size:23px; font-weight:700; margin-top:16px;}
 .flavor-card p{font-size:14.5px; margin-top:8px; opacity:0.85;}
 .flavor-tag{ align-self:flex-start; font-size:12.5px; font-weight:700; padding:5px 12px; border-radius:100px; background:rgba(0,0,0,0.12); }
@@ -139,6 +146,18 @@ nav.wrap{ display:flex; align-items:center; justify-content:space-between; heigh
 .f2{background:#FFE3B0; color:#7A4A00;}
 .f3{background:#CDEFE6; color:#0A423D;}
 .f4{background:#FFD3C2; color:#7A2A0E;}
+
+/* ---------- GLIMPSES ---------- */
+.glimpse-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+.glimpse-card{
+  border-radius:var(--radius-lg); padding:22px 20px 24px; color:var(--ink);
+  display:flex; flex-direction:column; gap:14px;
+}
+.glimpse-card svg{ width:100%; height:auto; max-height:150px; }
+.glimpse-caption{ font-size:14.5px; font-weight:600; line-height:1.4; }
+@media (max-width:920px){
+  .glimpse-grid{grid-template-columns:repeat(2,1fr);}
+}
 
 /* ---------- STORY ---------- */
 .story{ background:var(--teal); color:var(--cream); position:relative; }
@@ -232,6 +251,11 @@ nav.wrap{ display:flex; align-items:center; justify-content:space-between; heigh
   border:1px solid var(--line); max-width:280px;
 }
 .qr-card img{ width:100%; border-radius:8px; }
+.qr-pending{
+  display:flex; flex-direction:column; align-items:center; gap:10px; text-align:center;
+  padding:30px 16px; background:var(--cream); border-radius:8px; color:var(--magenta-dark);
+}
+.qr-pending p{ font-size:13px; font-weight:600; color:var(--ink); max-width:200px; }
 .upi-id-row{
   display:flex; align-items:center; justify-content:space-between; gap:10px;
   margin-top:14px; font-size:12.5px; font-weight:600; word-break:break-all;
