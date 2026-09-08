@@ -1,31 +1,37 @@
 /* ===== Ek Aur — shared styles ===== */
 :root{
-  --cream:#FFF6E9;
-  --ink:#1B1206;
-  --magenta:#E63E7A;
-  --magenta-dark:#C22B62;
-  --marigold:#FFB627;
-  --teal:#0E5C56;
-  --teal-dark:#0A423D;
-  --coral:#FF6B4A;
-  --line: rgba(27,18,6,0.14);
-  --radius-lg: 28px;
-  --radius-sm: 14px;
+  /* Rooted, earned palette — akhara mitti, turmeric, sindoor, khadi */
+  --cream:#F3E7D3;
+  --ink:#241A12;
+  --magenta:#B23A2E;
+  --magenta-dark:#8C2B21;
+  --marigold:#D9A125;
+  --teal:#3B4A2A;
+  --teal-dark:#252F19;
+  --coral:#B5651D;
+  --line: rgba(36,26,18,0.16);
+  --radius-lg: 24px;
+  --radius-sm: 12px;
 }
 *{box-sizing:border-box; margin:0; padding:0;}
 html{scroll-behavior:smooth;}
 body{
   background:var(--cream);
   color:var(--ink);
-  font-family:'Manrope', sans-serif;
-  font-size:17px;
+  font-family:'Rajdhani', sans-serif;
+  font-size:18px;
+  font-weight:500;
   line-height:1.55;
   overflow-x:hidden;
+  background-image:
+    radial-gradient(rgba(36,26,18,0.035) 1px, transparent 1px);
+  background-size: 5px 5px;
 }
 h1,h2,h3,.display{
-  font-family:'Unbounded', sans-serif;
-  line-height:1.05;
-  letter-spacing:-0.01em;
+  font-family:'Yatra One', cursive;
+  line-height:1.15;
+  letter-spacing:0.005em;
+  font-weight:400;
 }
 a{color:inherit; text-decoration:none;}
 img,svg{display:block; max-width:100%;}
@@ -44,7 +50,7 @@ header{
   border-bottom:1px solid var(--line);
 }
 nav.wrap{ display:flex; align-items:center; justify-content:space-between; height:78px; }
-.logo{ font-family:'Unbounded'; font-weight:800; font-size:24px; display:flex; align-items:center; gap:8px; }
+.logo{ font-family:'Yatra One'; font-weight:800; font-size:24px; display:flex; align-items:center; gap:8px; }
 .logo .dot{width:9px; height:9px; border-radius:50%; background:var(--magenta); display:inline-block;}
 .nav-links{display:flex; gap:32px; font-weight:600; font-size:15px;}
 .nav-links a{position:relative; padding:4px 0;}
@@ -85,18 +91,18 @@ nav.wrap{ display:flex; align-items:center; justify-content:space-between; heigh
   transform:rotate(-3deg); box-shadow:0 30px 70px rgba(0,0,0,0.35);
   border:7px solid var(--cream);
 }
-.hero-photo-frame img{width:100%; height:auto; display:block;}
+.hero-photo-frame img, .hero-photo-frame video{width:100%; height:auto; display:block;}
 .hero-badge{
   position:absolute; top:70px; right:6%; width:118px; height:118px; border-radius:50%;
   background:var(--teal); color:var(--cream); display:flex; align-items:center; justify-content:center;
-  text-align:center; font-family:'Unbounded'; font-weight:700; font-size:13px; line-height:1.25; padding:10px;
+  text-align:center; font-family:'Yatra One'; font-weight:700; font-size:13px; line-height:1.25; padding:10px;
   animation: spin-slow 18s linear infinite; border:2px dashed rgba(255,246,233,0.5);
 }
 @keyframes spin-slow{ to{ transform:rotate(360deg);} }
 
 /* ---------- MARQUEE ---------- */
 .marquee-band{ background:var(--ink); color:var(--cream); overflow:hidden; white-space:nowrap; padding:16px 0; }
-.marquee-track{ display:inline-block; padding-left:100%; animation: scroll-left 26s linear infinite; font-family:'Unbounded'; font-weight:600; font-size:16px; }
+.marquee-track{ display:inline-block; padding-left:100%; animation: scroll-left 26s linear infinite; font-family:'Yatra One'; font-weight:600; font-size:16px; }
 .marquee-track span{ margin:0 28px; color:var(--marigold);}
 @keyframes scroll-left{ from{transform:translateX(0);} to{transform:translateX(-100%);} }
 
@@ -137,13 +143,13 @@ nav.wrap{ display:flex; align-items:center; justify-content:space-between; heigh
 /* ---------- STORY ---------- */
 .story{ background:var(--teal); color:var(--cream); position:relative; }
 .story .wrap{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:60px; align-items:center; }
-.story-word{ font-family:'Unbounded'; font-weight:900; font-size:clamp(40px,5vw,64px); color:var(--marigold); }
+.story-word{ font-family:'Yatra One'; font-weight:900; font-size:clamp(40px,5vw,64px); color:var(--marigold); }
 .story-translit{font-size:16px; letter-spacing:0.02em; color:rgba(255,246,233,0.7); margin-top:6px; font-weight:600;}
 .story p.big{font-size:22px; font-weight:600; margin-top:26px; max-width:480px;}
 .story-meaning{ background:var(--teal-dark); border-radius:var(--radius-lg); padding:36px; margin-top:8px; }
 .story-meaning-row{display:flex; gap:16px; padding:14px 0; border-bottom:1px solid rgba(255,246,233,0.14);}
 .story-meaning-row:last-child{border-bottom:none;}
-.story-meaning-row .num{font-family:'Unbounded'; font-weight:700; color:var(--marigold); min-width:26px;}
+.story-meaning-row .num{font-family:'Yatra One'; font-weight:700; color:var(--marigold); min-width:26px;}
 
 /* ---------- BENEFITS ---------- */
 .benefit-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--line); border:1px solid var(--line); border-radius:var(--radius-lg); overflow:hidden; }
@@ -170,14 +176,14 @@ nav.wrap{ display:flex; align-items:center; justify-content:space-between; heigh
 .ingredient-copy p{margin-top:12px; max-width:640px; color:#4a3d2e; font-size:15.5px;}
 .ingredient-stats{display:flex; gap:28px; margin-top:18px; flex-wrap:wrap;}
 .ingredient-stats div{font-size:13px; font-weight:600; color:#4a3d2e;}
-.ingredient-stats strong{display:block; font-family:'Unbounded'; font-size:20px; color:var(--ink);}
+.ingredient-stats strong{display:block; font-family:'Yatra One'; font-size:20px; color:var(--ink);}
 
 /* ---------- STAT STRIP ---------- */
 .stat-strip{ background:var(--coral); color:var(--ink); }
 .stat-strip .wrap{ display:grid; grid-template-columns:repeat(4,1fr); padding:56px 32px; gap:20px; }
 .stat{text-align:left; border-left:2px solid rgba(27,18,6,0.25); padding-left:22px;}
 .stat:first-child{border-left:none; padding-left:0;}
-.stat .big-num{font-family:'Unbounded'; font-weight:800; font-size:40px;}
+.stat .big-num{font-family:'Yatra One'; font-weight:800; font-size:40px;}
 .stat .label{font-size:13.5px; font-weight:600; margin-top:6px; max-width:150px;}
 
 /* ---------- TESTIMONIALS ---------- */
@@ -195,7 +201,7 @@ nav.wrap{ display:flex; align-items:center; justify-content:space-between; heigh
 /* ---------- RESERVE / PRE-ORDER ---------- */
 .reserve-progress{ margin-bottom:48px; }
 .reserve-progress-top{ display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:10px; font-size:15px; font-weight:600; margin-bottom:12px; }
-.reserve-count strong, .reserve-deadline strong{ font-family:'Unbounded'; font-weight:700; color:var(--magenta-dark); }
+.reserve-count strong, .reserve-deadline strong{ font-family:'Yatra One'; font-weight:700; color:var(--magenta-dark); }
 .reserve-bar{ height:14px; border-radius:100px; background:var(--line); overflow:hidden; }
 .reserve-bar-fill{ height:100%; background:linear-gradient(90deg, var(--magenta), var(--coral)); border-radius:100px; transition:width .4s ease; }
 
@@ -206,7 +212,7 @@ nav.wrap{ display:flex; align-items:center; justify-content:space-between; heigh
 }
 .reserve-offer{ background:var(--cream); padding:44px; }
 .reserve-price{ margin-top:22px; display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; }
-.price-now{ font-family:'Unbounded'; font-weight:800; font-size:40px; color:var(--ink); }
+.price-now{ font-family:'Yatra One'; font-weight:800; font-size:40px; color:var(--ink); }
 .price-note{ font-size:13px; color:#7a6a56; max-width:220px; }
 .reserve-perks{ margin-top:24px; list-style:none; display:flex; flex-direction:column; gap:10px; }
 .reserve-perks li{ font-size:14.5px; padding-left:26px; position:relative; color:#4a3d2e; }
@@ -216,7 +222,7 @@ nav.wrap{ display:flex; align-items:center; justify-content:space-between; heigh
 .reserve-step{ display:flex; gap:14px; margin-bottom:16px; }
 .step-num{
   width:30px; height:30px; border-radius:50%; background:var(--ink); color:var(--cream);
-  display:flex; align-items:center; justify-content:center; font-family:'Unbounded'; font-weight:700; font-size:13px;
+  display:flex; align-items:center; justify-content:center; font-family:'Yatra One'; font-weight:700; font-size:13px;
   flex-shrink:0;
 }
 .reserve-step h3{ font-size:17px; font-weight:700; }
@@ -271,7 +277,7 @@ nav.wrap{ display:flex; align-items:center; justify-content:space-between; heigh
 .city-row{ display:flex; justify-content:space-between; align-items:center; padding:20px 40px; border-top:1px solid var(--line); }
 .city-row .city{font-weight:700; font-size:15px;}
 .city-row .stores{font-size:13.5px; color:#4a3d2e; margin-top:3px;}
-.city-row .count{ font-family:'Unbounded'; font-weight:700; color:var(--magenta-dark); font-size:14px;}
+.city-row .count{ font-family:'Yatra One'; font-weight:700; color:var(--magenta-dark); font-size:14px;}
 
 /* ---------- FAQ ---------- */
 .faq-category{margin-bottom:48px;}
